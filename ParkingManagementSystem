@@ -1,0 +1,41 @@
+1. Class: ParkingManagementSystem
+This class will be the main controller for the parking system, handling the primary interactions and logic for parking assignment based on the license plate input.
+
+Methods:
+
+constructor(int totalSpots)
+Description: Initializes the parking management system with a specified number of total parking spots.
+Pre-conditions: totalSpots should be a positive integer representing the total number of parking spots available.
+Post-conditions: The system is initialized with an empty database and the specified number of spots are marked as available.
+int assignParkingSpot(const std::string& licensePlate)
+Description: Assigns a parking spot to a vehicle or retrieves an existing spot based on the vehicle's license plate.
+Pre-conditions: licensePlate must be a valid non-empty string.
+Post-conditions: If the vehicle is returning and a spot was previously assigned, the same spot is returned. If the vehicle is new and spots are available, a spot is assigned and its index returned. If no spots are available, -1 is returned.
+2. Class: ParkingDatabase
+This simulated class will act as an in-memory storage using a simple data structure, optimized for this terminal-based simulation.
+
+Methods:
+
+constructor()
+Description: Sets up the in-memory database, typically a map or similar data structure.
+Pre-conditions: None.
+Post-conditions: The database is initialized and ready to store license plates with corresponding parking spot indices.
+int getOrAssignSpot(const std::string& licensePlate)
+Description: Retrieves an existing spot for the license plate or assigns a new one if it is not found.
+Pre-conditions: None.
+Post-conditions: Returns the parking spot number associated with the license plate, or assigns a new spot if it's the first visit and returns that spot number. If parking is full, returns -1.
+3. Class: UserInterface
+This class will handle all user interactions through the terminal, taking inputs and displaying outputs relevant to the parking process.
+
+Methods:
+
+void displayMessage(const std::string& message)
+Description: Outputs a message to the terminal.
+Pre-conditions: None.
+Post-conditions: The specified message is printed to the terminal.
+std::string getUserInput()
+Description: Retrieves input from the user via the terminal.
+Pre-conditions: None.
+Post-conditions: The user input is returned as a string.
+System Integration and Operation
+Operation Flow: The UserInterface class will continuously prompt the user to enter a license plate number. This input will be passed to the ParkingManagementSystem, which utilizes the ParkingDatabase to determine or assign parking spots. Results will be communicated back to the user through the UserInterface.
