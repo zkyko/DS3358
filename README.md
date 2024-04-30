@@ -13,12 +13,14 @@ The parking management system aims to optimize the use of parking spaces by auto
 
 Dynamic Spot Assignment: Ensuring that each vehicle is assigned to the most appropriate available parking spot upon entry.
 Tracking Occupancy: Maintaining up-to-date records of which spots are occupied and which are available, adjusting in real-time as vehicles enter and leave.
+
 Handling Re-entry: Efficiently managing vehicles that frequently enter and leave the parking area by remembering their previously assigned spots.
 Scalability and Flexibility: Designing the system to easily scale up for large parking lots and to adapt to different types of parking scenarios.
 Usage of Classes
 The system is built using several key classes, each responsible for a specific part of the parking management process:
 
 ParkingManagementSystem: The core class that handles the logic for parking spot assignments, tracking, and management.
+
 Methods:
 assignParkingSpot: Assigns an available parking spot to a vehicle.
 carLeaves: Frees up a parking spot when a vehicle exits.
@@ -26,6 +28,7 @@ isFull: Checks if the parking lot is at full capacity.
 loadParkingDataFromFile: Initializes the parking spot statuses from a file.
 isReturningCar: Checks if a vehicle has previously parked in the lot.
 UserInterface: Facilitates interaction with the parking management system through a command-line interface or potentially a graphical user interface (GUI).
+
 Methods:
 getUserInput: Collects input from the user.
 displayMessage: Displays messages to the user.
