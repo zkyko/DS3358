@@ -1,0 +1,9 @@
+// Main program for managing a car parking system using a user interface and parking management system.
+// The system reads the license plate from user input and uses it to manage parking spots.
+// Key functionalities include:
+// 1. Reading car's license plate as they arrive.
+// 2. Deciding if the car should return to a previously assigned spot or be given a new one based on availability.
+// 3. Updating the database with new entries for new cars and retaining existing data for returning cars.
+// The ParkingManagementSystem handles the assignment of parking spots and keeps track of each car's designated spot in std::map.
+// If a spot is assigned, the system confirms the spot assignment through the user interface. If the parking lot is full, it informs the user. (doesnt work yet)
+// The program continues to run, accepting license plates or the command 'exit' to quit.

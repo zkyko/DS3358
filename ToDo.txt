@@ -1,0 +1,18 @@
+Could also Implement a Car Departure Tracking: (we talked about simply assigning the spot until the all the parking spaces are full but ..)
+for that, Update the UI: Add user interface options to allow operators or an automated system to input when a car exits.
+
+File Loading: (Doesnot work as intended yet)
+loadParkingDataFromFile effectively loads parking data from a file and updates both parkingDatabase and parkingSpots. Need to Ensure that nextAvailableSpot is handled correctly across system restarts or data reloads to avoid overwriting existing data.
+
+Parking Spot Assignment: (Doesnot work as intended yet)
+The assignParkingSpot function assumes the first available spot is always the next spot in sequence. This works, but if cars leave and spaces become available, those spaces won't be reused. To handle this, we could maintain a priority queue (min-heap) of available spots.
+
+Checking if Full: (Doesnot work as intended yet)
+The isFull function is straightforward. As mentioned, implementing a feature like that to predict when the next spot will be available could be useful, especially in real-world applications where user wait times could be significant. - if we are updating our program to include timed parking. if not- this not very useful.
+or
+Implement queue-based handling for cars when no spots are available, using a waitlist system.
+
+
+Maybe a feature to manage car data more efficiently or to display sorted lists of parked cars. ? 
+
+
